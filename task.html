@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
     <title>Hackers' Club JS Session</title>
   </head>
   <body>
@@ -8,9 +9,22 @@
     <input id="last_name_text" placeholder="Enter last name" />
     <button onclick="swap()"> Swap Names </button>
   </body>
-  <script type="text/javascript">
-    function swap(){
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 
+  <script type="text/javascript">
+
+    function swap(){
+      /*var first = document.getElementById('first_name_text').value;
+      var last = document.getElementById('last_name_text').value;
+      
+      document.getElementById('first_name_text').value = last;
+      document.getElementById('last_name_text').value = first;
+      */
+      var first = $('#first_name_text').val();
+      var last =  $('#last_name_text').val();
+      $('#first_name_text').val(last);
+      $('#last_name_text').val(first);
     }
+
   </script>
 </html>
